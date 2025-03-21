@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人简介</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+        
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+            font-size: 20px; 
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+            background-color: rgb(237, 236, 235); /* Change background color to beige */
+            transition: background-color 0.5s ease;
+        }
+        .nav {
+            font-size: 16px; /* 导航栏字体相应调整 */
+            background-color: transparent;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 0 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 8px 16px; /* 调整内边距以适应更小的字体 */
+            border-radius: 20px;
+            display: inline-block;
+            transition: box-shadow 0.3s ease;
+        }
+        .nav a:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+        }
+        .avatar-container {
+            width: 33.33%; /* Take one-third of the width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center the avatar container vertically */
+            padding: 20px;
+            position: fixed; /* Make the avatar container fixed */
+            top: 50%; /* Position it in the middle of the viewport */
+            left: 0; /* Align to the left */
+            transform: translateY(-50%); /* Adjust for the height of the container */
+        }
+        .avatar {
+            width: 75%; /* Adjust the width to fit within the new container size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10%;
+            object-fit: cover;
+            margin-bottom: 0px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 33.33%; /* Offset the content to the right */
+        }
+        h1 {
+            font-size: 36px; /* 标题也相应缩小 */
+            color: #222222;
+        }
+        h2 {
+            font-size: 28px;
+            color: #222222;
+        }
+        h3 {
+            font-size: 20px;
+            color: #222222;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 80px 0px 0px;
+            box-sizing: border-box;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none; /* Remove underline hover effect */
+        }
+        ul {
+            list-style-type: square; /* Change bullet point style to square */
+        }
+        .icon-link {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4A4A4A; /* 深灰色 */
+            margin: 0 6px; /* 左右各12px，总共24px间距 */
+            transition: all 0.3s ease;
+        }
+        .icon-link i {
+            font-size: 24px; /* 调整图标大小以适应36x36的容器 */
+        }
+        .icon-link:hover {
+            color: #6692ff;
+            transform: translateY(-5px);
+        }
+        .text-right {
+            text-align: right; /* Align text to the right */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <a href="#" class="icon-link" id="translate-icon" style="position: fixed; top: 10px; right: 0px; z-index: 101;">
+        <i class="fas fa-language"></i> <!-- Translate icon -->
+    </a>
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目及作品</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="avatar-container">
+            <img src="avatar.gif" alt="头像" class="avatar">
+            <div class="social-icons">
+                <a href="mailto:119010066@link.cuhk.edu.cn" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/pipapplepie" target="_blank" class="icon-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="FANG Lingshu-Resume.pdf" target="_blank" class="icon-link">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+        </div>
+        <style>
+            .avatar-container {
+                width: 33.33%; /* Take one-third of the width */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; /* Center the avatar container vertically */
+                padding: 20px;
+                position: fixed; /* Make the avatar container fixed */
+                top: 50%; /* Position it in the middle of the viewport */
+                left: 0; /* Align to the left */
+                transform: translateY(-50%); /* Adjust for the height of the container */
+            }
+            .avatar {
+                width: 75%; /* Adjust the width to fit within the new container size */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 10%;
+                object-fit: cover;
+                margin-bottom: 0px;
+            }
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .icon-link {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #4A4A4A; /* 深灰色 */
+                margin: 0 6px; /* 左右各12px，总共24px间距 */
+                transition: all 0.3s ease;
+            }
+            .icon-link i {
+                font-size: 24px; /* 调整图标大小以适应36x36的容器 */
+            }
+            .icon-link:hover {
+                color: #6692ff;
+                transform: translateY(-5px);
+            }
+        </style>
+        <div class="content">
+            <div id="about" class="section">
+                <h1>方凌姝</h1>
+                <p><b>新加坡国立大学</b>，理学硕士，数学专业</p>
+                <p><b>香港中文大学（深圳）</b>，理学学士，应用数学专业 <b>（甲等荣誉毕业）</b></p>
+                <h2>工作经验</h2>
+                <p>中国科学院大学重庆学院 - 教学助理 </p>
+                <p>LeadyGo（大学创业组织）- 微信公众号运营、图文美编 </p>
+            </div>
+
+            <div id="skills" class="section"> <!-- Add skills section -->
+                <h2>技能</h2>
+                <ul>
+                    <li>Python/ Pytorch</li>
+                    <li>SQL</li>
+                    <li>MATLAB</li>
+                    <li>Markdown/ LATEX</li>
+                    <li>Machine Learning/ Deep Learning</li>
+                    <li>AIGC</li>
+                    <li>Web Development</li>
+                </ul>
+                <h2>语言</h2>
+                <ul>
+                    <li>中文（母语）</li>
+                    <li>英语（IELTS: Band 7.5）</li>
+                    <li>韩语（TOPIK I 2级）</li>
+                    <li>日语（初级）</li>
+                </ul>
+                <h2>兴趣爱好</h2>
+                <p>阅读、绘画、登山、摄影、编程、RPG游戏</p>
+            </div>
+
+            <div id="projects" class="section">
+                <h2>项目及作品</h2>
+                <h3>此网页;）</h3>
+                <p>此网页在GitHub Copilot以及Pixilart的帮助下完成。</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let isEnglish = false;
+        document.getElementById('translate-icon').addEventListener('click', function() {
+            if (isEnglish) {
+                document.querySelector('html').lang = 'zh-CN';
+                document.querySelector('title').innerText = '我的个人简介';
+                document.querySelector('.nav a[href="#about"]').innerText = '关于我';
+                document.querySelector('.nav a[href="#skills"]').innerText = '技能';
+                document.querySelector('.nav a[href="#projects"]').innerText = '项目及作品';
+                document.querySelector('#about h1').innerText = '方凌姝';
+                document.querySelector('#about p:nth-of-type(1)').innerHTML = '<b>新加坡国立大学</b>，理学硕士，数学专业';
+                document.querySelector('#about p:nth-of-type(2)').innerHTML = '<b>香港中文大学（深圳）</b>，理学学士，应用数学专业 <b>（甲等荣誉毕业）</b>';
+                document.querySelector('#about h2:nth-of-type(1)').innerText = '工作经验';
+                document.querySelector('#about p:nth-of-type(3)').innerText = '中国科学院大学重庆学院 - 教学助理';
+                document.querySelector('#about p:nth-of-type(4)').innerText = 'LeadyGo（大学创业组织）- 微信公众号运营、图文美编';
+                document.querySelector('#skills h2').innerText = '技能';
+                document.querySelector('#skills ul:nth-of-type(1)').innerHTML = '<li>Python/ Pytorch</li><li>SQL</li><li>MATLAB</li><li>Markdown/ LATEX</li><li>Machine Learning/ Deep Learning</li><li>AIGC</li><li>Web Development</li>';
+                document.querySelector('#skills h2:nth-of-type(2)').innerText = '语言';
+                document.querySelector('#skills ul:nth-of-type(2)').innerHTML = '<li>中文（母语）</li><li>英语（IELTS: Band 7.5）</li><li>韩语（TOPIK I 2级）</li><li>日语（初级）</li>';
+                document.querySelector('#skills h2:nth-of-type(3)').innerText = '兴趣爱好';
+                document.querySelector('#skills p:nth-of-type(1)').innerText = '阅读、绘画、登山、摄影、编程、RPG游戏';
+                document.querySelector('#projects h2').innerText = '项目及作品';
+                document.querySelector('#projects h3:nth-of-type(1)').innerText = '此网页;）';
+                document.querySelector('#projects p:nth-of-type(1)').innerText = '此网页在GitHub Copilot以及Pixilart的帮助下完成。';
+            } else {
+                document.querySelector('html').lang = 'en';
+                document.querySelector('title').innerText = 'My Personal Profile';
+                document.querySelector('.nav a[href="#about"]').innerText = 'About Me';
+                document.querySelector('.nav a[href="#skills"]').innerText = 'Skills';
+                document.querySelector('.nav a[href="#projects"]').innerText = 'Projects and Works';
+                document.querySelector('#about h1').innerText = 'FANG Lingshu, Sue';
+                document.querySelector('#about p:nth-of-type(1)').innerHTML = '<b>National University of Singapore</b>, Master of Science in Mathematics';
+                document.querySelector('#about p:nth-of-type(2)').innerHTML = '<b>The Chinese University of Hong Kong (Shenzhen)</b>, Bachelor of Science in Applied Mathematics <b>(First Class Honours)</b>';
+                document.querySelector('#about h2:nth-of-type(1)').innerText = 'Work Experience';
+                document.querySelector('#about p:nth-of-type(3)').innerText = 'University of Chinese Academy of Sciences, Chongqing - Teaching Assistant';
+                document.querySelector('#about p:nth-of-type(4)').innerText = 'LeadyGo (University Startup Organization) - WeChat Public Account Manager, Graphic Designer';
+                document.querySelector('#skills h2').innerText = 'Skills';
+                document.querySelector('#skills ul:nth-of-type(1)').innerHTML = '<li>Python/ Pytorch</li><li>SQL</li><li>MATLAB</li><li>Markdown/ LATEX</li><li>Machine Learning/ Deep Learning</li><li>AIGC</li><li>Web Development</li>';
+                document.querySelector('#skills h2:nth-of-type(2)').innerText = 'Languages';
+                document.querySelector('#skills ul:nth-of-type(2)').innerHTML = '<li>Chinese (Native)</li><li>English (IELTS: Band 7.5)</li><li>Korean (TOPIK I Level 2)</li><li>Japanese (Beginner)</li>';
+                document.querySelector('#skills h2:nth-of-type(3)').innerText = 'Hobbies';
+                document.querySelector('#skills p:nth-of-type(1)').innerText = 'Reading, Drawing, Hiking, Photography, Programming, RPG Games';
+                document.querySelector('#projects h2').innerText = 'Projects and Works';
+                document.querySelector('#projects h3:nth-of-type(1)').innerText = 'This webpage ;)';
+                document.querySelector('#projects p:nth-of-type(1)').innerText = 'This webpage was created with GitHub Copilot and Pixilart.';
+            }
+            isEnglish = !isEnglish;
+        });
+    </script>
+</body>
+</html>
